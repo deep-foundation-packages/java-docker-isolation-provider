@@ -88,7 +88,7 @@ public class QueryDataGraphQLGenerator {
 
         List<String> queryBodyList = new ArrayList<>();
         for (QueryData queryData : calledQueries) {
-            queryBodyList.add(queryData.resultAlias + ": " + queryData.queryName + "(" + String.join(",", queryData.args) + ") { " + queryData.resultReturning + " }");
+            queryBodyList.add(queryData.resultAlias + ": " + queryData.queryName + "(" + String.join(",", queryData.args) + ") { " + queryData.returning + " }");
         }
         String queryBody = String.join(",", queryBodyList);
 
